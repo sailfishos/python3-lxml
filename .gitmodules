@@ -1,0 +1,3 @@
+[submodule "lxml"]
+	path = lxml
+	url = https://git.sailfishos.org/mirror/lxml.git
