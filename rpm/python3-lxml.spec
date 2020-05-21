@@ -1,6 +1,3 @@
-# fixme: should be defined in base system side
-%define python3_sitearch %(%{__python3} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")
-
 Name:       python3-lxml
 Summary:    ElementTree-like Python bindings for libxml2 and libxslt
 Version:    5.5.0
@@ -26,11 +23,11 @@ unlike the default bindings.
 %setup -q -n %{name}-%{version}/lxml
 
 %build
-CFLAGS="%{optflags}" %{__python3} setup.py build %{?_smp_mflags}
+%py3_build
 
 %install
 rm -rf %{buildroot}
-%{__python3} setup.py install --skip-build --root %{buildroot}
+%py3_install
 
 %files
 %defattr(-,root,root,-)
