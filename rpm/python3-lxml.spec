@@ -1,6 +1,6 @@
 Name:       python3-lxml
 Summary:    ElementTree-like Python bindings for libxml2 and libxslt
-Version:    5.5.0
+Version:    4.6.3
 Release:    1
 License:    BSD
 URL:        http://lxml.de/
