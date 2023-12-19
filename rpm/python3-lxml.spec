@@ -18,6 +18,11 @@ bindings.  In particular, lxml deals with Python Unicode strings
 rather than encoded UTF-8 and handles memory management automatically,
 unlike the default bindings.
 
+%package doc
+Summary: Documentation for Python bindings for libxml2 and libxslt
+
+%description doc
+%{summary}.
 
 %prep
 %setup -q -n %{name}-%{version}/lxml
@@ -32,5 +37,8 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 %license LICENSES.txt
-%doc README.rst CREDITS.txt CHANGES.txt doc/
 %{python3_sitearch}/*
+
+%files doc
+%defattr(-,root,root,-)
+%doc README.rst CREDITS.txt CHANGES.txt doc/
