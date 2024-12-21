@@ -1,9 +1,9 @@
 Name:       python3-lxml
 Summary:    ElementTree-like Python bindings for libxml2 and libxslt
-Version:    4.6.5
+Version:    4.9.4
 Release:    1
 License:    BSD
-URL:        http://lxml.de/
+URL:        https://github.com/sailfishos/python3-lxml
 Source0:    %{name}-%{version}.tar.gz
 BuildRequires:  pkgconfig(libxslt)
 BuildRequires:  python3-cython
@@ -31,14 +31,11 @@ Summary: Documentation for Python bindings for libxml2 and libxslt
 %py3_build
 
 %install
-rm -rf %{buildroot}
 %py3_install
 
 %files
-%defattr(-,root,root,-)
 %license LICENSES.txt
 %{python3_sitearch}/*
 
 %files doc
-%defattr(-,root,root,-)
 %doc README.rst CREDITS.txt CHANGES.txt doc/
