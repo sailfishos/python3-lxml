@@ -1,6 +1,6 @@
 Name:       python3-lxml
 Summary:    ElementTree-like Python bindings for libxml2 and libxslt
-Version:    4.9.4
+Version:    5.3.0
 Release:    1
 License:    BSD
 URL:        https://github.com/sailfishos/python3-lxml
