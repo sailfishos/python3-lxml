@@ -9,6 +9,8 @@ BuildRequires:  pkgconfig(libxslt)
 BuildRequires:  python3-cython
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
+BuildRequires:  pyproject-rpm-macros
+BuildRequires:  python3-pip
 
 %description
 lxml provides a Python binding to the libxslt and libxml2 libraries.
@@ -28,10 +30,10 @@ Summary: Documentation for Python bindings for libxml2 and libxslt
 %setup -q -n %{name}-%{version}/lxml
 
 %build
-%py3_build
+%pyproject_wheel
 
 %install
-%py3_install
+%pyproject_install
 
 %files
 %license LICENSES.txt
